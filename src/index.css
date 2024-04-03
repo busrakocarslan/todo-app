@@ -4,6 +4,10 @@ body{
   
 }
 .div{
+  & .completed {
+  
+    text-decoration: line-through;
+  }
   
     
   
@@ -20,6 +24,7 @@ body{
   &:hover{
     transform: scale(1.05);
   }
+  
   
 
 

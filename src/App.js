@@ -14,6 +14,7 @@ function App() {
     const addTodo = {
       id: uuidv4(),
       title: plan,
+      durum:false
     };
     if (trimPlan?.length) {//PLAN?.LENGTH? ŞEKLİNDE YAZDIM AMA HATA VERDİ
 
@@ -28,7 +29,7 @@ function App() {
   return (
     <div>
       <Header plan={plan} setPlan={setPlan} newPlan={newPlan} />
-      <TodoList plans={plans} newPlan={newPlan} />
+      <TodoList plans={plans} setPlans={setPlans} newPlan={newPlan} />
     </div>
   );
 }
