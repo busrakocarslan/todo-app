@@ -1,0 +1,28 @@
+body{
+  width: 90%;
+  
+  
+}
+.div{
+  
+    
+  
+  & ul li{
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 1px 1px orange;
+  transition: all .3s ease-in;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  &:hover{
+    transform: scale(1.05);
+  }
+  
+
+
+  }
+  
+}
