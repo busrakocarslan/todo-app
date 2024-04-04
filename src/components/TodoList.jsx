@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { GoArrowRight } from "react-icons/go";
 import { FcFullTrash } from "react-icons/fc";
 import "../index.css";
+import { addLocal } from "../helpers/unitl";
 
-function TodoList({ plans, setPlans }) {
+function TodoList({ plans=[], setPlans }) {//plansı direk [] atayıp error vermesi engellendi
   const handleClean = (id) => {
-    setPlans(plans?.filter((app) => app.id !== id));
+    const deneme=plans?.filter((app) => app.id !== id);    
+    setPlans(deneme)
+    addLocal("planlar",JSON.stringify(deneme))
+
   };
   const handleLine = (id) => {
-    setPlans(
-      plans?.map((app) => (app.id === id ? { ...app, durum: !app.durum } : app))
-    );
+    const deneme=plans?.map((app) => (app.id === id ? { ...app, durum: !app.durum } : app))
+    setPlans(deneme);
+    addLocal("planlar",JSON.stringify(deneme))
   };
   return (
     <div className="w-50 m-auto div">
